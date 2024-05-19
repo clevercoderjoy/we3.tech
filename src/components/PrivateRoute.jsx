@@ -1,23 +1,21 @@
-// src/components/PrivateRoute.js
 import PropTypes from 'prop-types';
 import { useSelector } from 'react-redux';
-import { Navigate, Route } from 'react-router-dom';
+import { Navigate } from 'react-router-dom';
 
-const PrivateRoute = ({ component: Component, ...rest }) => {
+const PrivateRoute = ({ children }) => {
   const token = useSelector((state) => state.user.token);
+  console.log(token);
+  console.log(children);
 
   return (
-    <Route
-      {...rest}
-      render={(props) =>
-        token ? <Component {...props} /> : <Navigate to="/signin" />
-      }
-    />
+    <>
+      {token ? children : <Navigate to="/signup" />}
+    </>
   );
 };
 
 PrivateRoute.propTypes = {
-  component: PropTypes.elementType.isRequired,
+  children: PropTypes.node.isRequired,
 };
 
 export default PrivateRoute;

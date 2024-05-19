@@ -1,4 +1,3 @@
-// src/components/Form.js
 import PropTypes from 'prop-types';
 
 const Form = ({ children, onSubmit }) => {

@@ -1,4 +1,3 @@
-// src/components/Modal.js
 import PropTypes from 'prop-types';
 
 const Modal = ({ title, content, footer }) => {
