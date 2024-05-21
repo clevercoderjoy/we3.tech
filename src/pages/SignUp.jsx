@@ -27,7 +27,7 @@ const SignUp = () => {
   return (
     <>
       <div className='border-2 border-black text-center my-4 rounded font-bold mx-4 px-2 py-4'>
-        Note: The api provided for this assignment has been built in a way that only the users that are already registered in the database can sign in and sign up. So use the following credentials to get in. email: eve.holt@reqres.in password: cityslicka
+        Note: The api provided for this assignment has been built in a way that only the users that are already registered in the database can sign in. New sign ups are not working because of the way the api has been implemented and gives message that only the defined users succeed registration. There was no need for sign in and sign up pages only one of these would have done the job but as it was mentioned in the assignment, I have implemented sign in and sign up pages. So use the following credentials to get in. email: eve.holt@reqres.in password: cityslicka
       </div>
       <form onSubmit={handleSubmit} className='flex flex-col items-center'>
         <input

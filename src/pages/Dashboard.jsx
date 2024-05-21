@@ -31,7 +31,7 @@ const Dashboard = () => {
       <h1 className='font-bold text-4xl text-center my-4'>Dashboard</h1>
       <ul>
         {
-          data?.map((user) => <li key={user.id} className='border-2 border-black my-4 rounded mx-2'>
+          data?.map((user) => <li key={user.id} className='border-2 border-black my-4 rounded mx-2 pl-2'>
             <div className='flex justify-between'>
               <div className='flex flex-col justify-center font-bold'>
                 <span>First Name: {user.first_name}</span>
